@@ -1,9 +1,10 @@
-def fibonachi(a):
-    f = 0
-    s = 1
-    print(f, s, end=" ")
-    for x in range(a):
-        next = f + s
-        print(next, end=" ")
-        f = s
-        s = next
+def fibonacci(x):
+    a = b = 1
+    arr = [0, 1]
+    for i in range(x - 2):
+        a, b = b, a + b
+        arr.append(a)
+    return arr
+
+
+print(fibonacci(10))
